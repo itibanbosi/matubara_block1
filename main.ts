@@ -5,7 +5,7 @@ namespace matubara_blocks {
   //% blockId=sport_habatobi
   //% block="幅跳び" group="スポーツテスト"
   export function habatobi():number{
-    return input.acceleration(Dimension.Y);
+    return input.acceleration(Dimension.Y)/1100*90;
 
   }
 }

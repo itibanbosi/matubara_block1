@@ -9,7 +9,7 @@ namespace matubara_blocks_car {
   //% blockId=sport_habatobi
   //% block="幅跳び" group="スポーツテスト"
   export function habatobi(): void {
-    return acceleration(Dimension.Y)/1100*90
+    return input.acceleration(Dimension.Y)/1100*90
   }
 
 

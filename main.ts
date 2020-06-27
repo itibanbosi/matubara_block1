@@ -1,4 +1,4 @@
-//% color="#3943c6" block="幅跳び"
+//% color="#3943c6" block="体育"
 namespace matubara_blocks {
 
 

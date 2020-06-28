@@ -21,7 +21,7 @@ namespace matubara_blocks {
   }
 
 
- //% weight= 7 block="腕をふる角度が |%limit| 度より大きく" group="体育"
+ //% weight= 30 block="腕をふる角度が |%limit| 度より大きく" group="体育"
  //% limit.min=0 limit.max=90
   export function ude_more(limit: number): boolean {
         if ((input.acceleration(Dimension.X)/1100*90) > limit ){

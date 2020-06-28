@@ -1,6 +1,6 @@
 {
     "name": "eureka-blocks",
-    "version": "0.0.83",
+    "version": "0.1.0",
     "description": "A MakeCode package to use sonar sensors",
     "license": "MIT",
     "dependencies": {

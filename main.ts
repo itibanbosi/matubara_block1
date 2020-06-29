@@ -40,7 +40,7 @@ namespace matubara_blocks {
             return false;
         }
     }   
- //% weight=19 block="ｙ軸＿腕をふる角度が |%limit| 度より大きく" group="体育"
+ //% weight=17 block="ｙ軸＿腕をふる角度が |%limit| 度より大きく" group="体育"
  //% limit.min=0 limit.max=90
   export function y_ude_more(limit: number): boolean {
         if ((input.acceleration(Dimension.Y)/1100*90) > limit ){
@@ -50,7 +50,7 @@ namespace matubara_blocks {
         }
     }    
 
- //% weight=18 block="ｙ軸＿腕をふる角度が |%limit| 度より小きく" group="体育"
+ //% weight=16 block="ｙ軸＿腕をふる角度が |%limit| 度より小きく" group="体育"
  //% limit.min=0 limit.max=90
   export function y_ude_small(limit: number): boolean {
         if ((input.acceleration(Dimension.Y)/1100*90) < limit ){
@@ -59,7 +59,7 @@ namespace matubara_blocks {
             return false;
         }
     }   
- //% weight=19 block="ｚ軸＿腕をふる角度が |%limit| 度より大きく" group="体育"
+ //% weight=15 block="ｚ軸＿腕をふる角度が |%limit| 度より大きく" group="体育"
  //% limit.min=0 limit.max=90
   export function z_ude_more(limit: number): boolean {
         if ((input.acceleration(Dimension.Z)/1100*90) > limit ){
@@ -69,7 +69,7 @@ namespace matubara_blocks {
         }
     }    
 
- //% weight=18 block="ｚ軸＿腕をふる角度が |%limit| 度より小きく" group="体育"
+ //% weight=14 block="ｚ軸＿腕をふる角度が |%limit| 度より小きく" group="体育"
  //% limit.min=0 limit.max=90
   export function z_ude_small(limit: number): boolean {
         if ((input.acceleration(Dimension.Z)/1100*90) < limit ){

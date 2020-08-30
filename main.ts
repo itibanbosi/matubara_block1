@@ -22,11 +22,11 @@ namespace matubara_blocks {
   export function axis( xyz:select_xyz){
     switch(xyz){
         case select_xyz.X:
-        return input.acceleration(Dimension.X)/1100*90;
+        return Math.round(input.acceleration(Dimension.X)/1100*90);
         case select_xyz.Y:
-        return input.acceleration(Dimension.Y)/1100*90;
+        return Math.round(input.acceleration(Dimension.Y)/1100*90);
         case select_xyz.Z:
-        return input.acceleration(Dimension.Z)/1100*90;
+        return Math.round(input.acceleration(Dimension.Z)/1100*90);
     }
   }
 

@@ -1,3 +1,8 @@
+enum vibrater_onoff {
+    ON,
+    OFF,
+}
+
 //% color="#3943c6" block="体育Ver0.91"
 namespace matubara_blocks {
 
@@ -76,6 +81,16 @@ namespace matubara_blocks {
             return true;
             }else{
             return false;
+        }
+    }   
+
+ //% weight=13 block="しん動センサー |mode| " group="体育"
+  export function vibrater(mode: vibrater_onoff) {
+        if (mode = vibrater_onoff.ON ){
+            pins.digitalWritePin(DigitalPin.P1, 1);
+            }
+        if (mode = vibrater_onoff.OFF){
+            pins.digitalWritePin(DigitalPin.P0, 0)
         }
     }   
 }

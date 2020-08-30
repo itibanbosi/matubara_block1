@@ -99,7 +99,7 @@ namespace matubara_blocks {
             pins.digitalWritePin(DigitalPin.P1, 1); 
             basic.pause(400);  
             pins.digitalWritePin(DigitalPin.P1, 0);
-            basic.pause(400); 
+            basic.pause(500); 
         }
     }
  //% color="#ffa800" weight=12 blockId=vib block="しん動 |%mode|" group="機能"

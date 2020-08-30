@@ -112,7 +112,7 @@ namespace matubara_blocks {
             music.ringTone(698)
             basic.pause(400);  
             pins.digitalWritePin(DigitalPin.P1, 0);
-            music.stopMelody(MelodyStopOptions.All)            
+            music.rest(music.beat(BeatFraction.Sixteenth))           
             basic.pause(400); 
         }
     }

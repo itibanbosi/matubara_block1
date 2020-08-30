@@ -94,8 +94,8 @@ namespace matubara_blocks {
  //% color="#ffa800" weight=13 blockId=vib_kanketu block="間欠しん動" group="機能"
   export function vib_kanketu() {
     let i=0;
-    for (let i=1 ; i<3 ;i++){
-            pins.digitalWritePin(DigitalPin.P1, 0);
+    for (let i=1 ; i<3 ;i++)　{
+            basic.pause(100); 
             pins.digitalWritePin(DigitalPin.P1, 1); 
             basic.pause(400);  
             pins.digitalWritePin(DigitalPin.P1, 0);

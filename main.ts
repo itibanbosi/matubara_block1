@@ -10,30 +10,30 @@ enum vibrater_kanketu {
 
 
 
-//% color="#3943c6" block="体育Ver0.91"
+//% color="#3943c2" block="上教大_体育_0.92"
 namespace matubara_blocks {
 
 
-  //% weight=30 blockId=sport_habatobi_x
-  //% block="X角度" group="体育"
+  //% color="#394300" weight=50 blockId=sport_habatobi_x
+  //% block="X角度" group="センサー"
   export function axis_x():number{
     return input.acceleration(Dimension.X)/1100*90;
   }
 
- //% weight=29 blockId=sport_habatobi_y
-  //% block="Y角度" group="体育"
+ //% color="#394300" weight=49 blockId=sport_habatobi_y
+  //% block="Y角度" group="センサー"
   export function axis_y():number{
     return input.acceleration(Dimension.Y)/1100*90;
   }
 
- //% weight=28 blockId=sport_habatobi_z
-  //% block="Z角度" group="体育"
+ //% color="#394300" weight=48 blockId=sport_habatobi_z
+  //% block="Z角度" group="センサー"
   export function axis_z():number{
     return input.acceleration(Dimension.Z)/1100*90;
   }
 
 
- //% weight=19 block="X軸＿腕をふる角度が |%limit| 度より大きく" group="センサー"
+ //% weight=39 block="X軸＿腕をふる角度が |%limit| 度より大きい" group="センサー"
  //% limit.min=0 limit.max=90
   export function x_ude_more(limit: number): boolean {
         if ((input.acceleration(Dimension.X)/1100*90) > limit ){
@@ -43,7 +43,7 @@ namespace matubara_blocks {
         }
     }    
 
- //% weight=18 block="X軸＿腕をふる角度が |%limit| 度より小きく" group="センサー"
+ //% weight=38 block="X軸＿腕をふる角度が |%limit| 度より小さい" group="センサー"
  //% limit.min=0 limit.max=90
   export function x_ude_small(limit: number): boolean {
         if ((input.acceleration(Dimension.X)/1100*90) < limit ){
@@ -52,7 +52,7 @@ namespace matubara_blocks {
             return false;
         }
     }   
- //% weight=17 block="ｙ軸＿腕をふる角度が |%limit| 度より大きく" group="センサー"
+ //% weight=37 block="ｙ軸＿腕をふる角度が |%limit| 度より大きい" group="センサー"
  //% limit.min=0 limit.max=90
   export function y_ude_more(limit: number): boolean {
         if ((input.acceleration(Dimension.Y)/1100*90) > limit ){
@@ -62,7 +62,7 @@ namespace matubara_blocks {
         }
     }    
 
- //% weight=16 block="ｙ軸＿腕をふる角度が |%limit| 度より小きく" group="センサー"
+ //% weight=36 block="ｙ軸＿腕をふる角度が |%limit| 度より小さい" group="センサー"
  //% limit.min=0 limit.max=90
   export function y_ude_small(limit: number): boolean {
         if ((input.acceleration(Dimension.Y)/1100*90) < limit ){
@@ -71,7 +71,7 @@ namespace matubara_blocks {
             return false;
         }
     }   
- //% weight=15 block="ｚ軸＿腕をふる角度が |%limit| 度より大きく" group="センサー"
+ //% weight=35 block="ｚ軸＿腕をふる角度が |%limit| 度より大きい" group="センサー"
  //% limit.min=0 limit.max=90
   export function z_ude_more(limit: number): boolean {
         if ((input.acceleration(Dimension.Z)/1100*90) > limit ){
@@ -81,7 +81,7 @@ namespace matubara_blocks {
         }
     }    
 
- //% weight=14 block="ｚ軸＿腕をふる角度が |%limit| 度より小きく" group="センサー"
+ //% weight=34 block="ｚ軸＿腕をふる角度が |%limit| 度より小さい" group="センサー"
  //% limit.min=0 limit.max=90
   export function z_ude_small(limit: number): boolean {
         if ((input.acceleration(Dimension.Z)/1100*90) < limit ){
@@ -91,7 +91,7 @@ namespace matubara_blocks {
         }
     }   
 
- //% color="#ffa800" weight=13 blockId=vib_kanketu block="間欠しん動" group="機能"
+ //% color="#ffa800" weight=23 blockId=vib_kanketu block="間欠しん動" group="機能"
   export function vib_kanketu() {
     let i=0;
     for (let i=1 ; i<3 ;i++)　{
@@ -103,7 +103,7 @@ namespace matubara_blocks {
         }
     }
 
- //% color="#ffa800" weight=13 blockId=vib_kanketu_oto block="間欠しん動（音付き）" group="機能"
+ //% color="#ffa800" weight=23 blockId=vib_kanketu_oto block="間欠しん動（音付き）" group="機能"
   export function vib_kanketu_oto() {
     let i=0;
     for (let i=1 ; i<3 ;i++)　{
@@ -135,7 +135,7 @@ namespace matubara_blocks {
         music.playTone(659, music.beat(BeatFraction.Eighth))
   }
 
-  //% color="#1E90FF" weight=51 block="待ち時間（秒）|%second|" group="機能"
+  //% color="#1E90FF" weight=10 block="待ち時間（秒）|%second|" group="機能"
   //% second.min=0 second.max=10
   export function driveForwards(second: number): void {
     basic.pause(second * 1000);

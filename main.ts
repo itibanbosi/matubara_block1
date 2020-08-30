@@ -95,6 +95,7 @@ namespace matubara_blocks {
   export function vib_kanketu() {
     let i=0;
     for (let i=1 ; i<3 ;i++){
+            pins.digitalWritePin(DigitalPin.P1, 0);
             pins.digitalWritePin(DigitalPin.P1, 1); 
             basic.pause(400);  
             pins.digitalWritePin(DigitalPin.P1, 0);

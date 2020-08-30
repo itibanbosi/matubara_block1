@@ -33,7 +33,7 @@ namespace matubara_blocks {
   }
 
 
- //% weight=19 block="X軸＿腕をふる角度が |%limit| 度より大きく" group="体育"
+ //% weight=19 block="X軸＿腕をふる角度が |%limit| 度より大きく" group="センサー"
  //% limit.min=0 limit.max=90
   export function x_ude_more(limit: number): boolean {
         if ((input.acceleration(Dimension.X)/1100*90) > limit ){
@@ -43,7 +43,7 @@ namespace matubara_blocks {
         }
     }    
 
- //% weight=18 block="X軸＿腕をふる角度が |%limit| 度より小きく" group="体育"
+ //% weight=18 block="X軸＿腕をふる角度が |%limit| 度より小きく" group="センサー"
  //% limit.min=0 limit.max=90
   export function x_ude_small(limit: number): boolean {
         if ((input.acceleration(Dimension.X)/1100*90) < limit ){
@@ -52,7 +52,7 @@ namespace matubara_blocks {
             return false;
         }
     }   
- //% weight=17 block="ｙ軸＿腕をふる角度が |%limit| 度より大きく" group="体育"
+ //% weight=17 block="ｙ軸＿腕をふる角度が |%limit| 度より大きく" group="センサー"
  //% limit.min=0 limit.max=90
   export function y_ude_more(limit: number): boolean {
         if ((input.acceleration(Dimension.Y)/1100*90) > limit ){
@@ -62,7 +62,7 @@ namespace matubara_blocks {
         }
     }    
 
- //% weight=16 block="ｙ軸＿腕をふる角度が |%limit| 度より小きく" group="体育"
+ //% weight=16 block="ｙ軸＿腕をふる角度が |%limit| 度より小きく" group="センサー"
  //% limit.min=0 limit.max=90
   export function y_ude_small(limit: number): boolean {
         if ((input.acceleration(Dimension.Y)/1100*90) < limit ){
@@ -71,7 +71,7 @@ namespace matubara_blocks {
             return false;
         }
     }   
- //% weight=15 block="ｚ軸＿腕をふる角度が |%limit| 度より大きく" group="体育"
+ //% weight=15 block="ｚ軸＿腕をふる角度が |%limit| 度より大きく" group="センサー"
  //% limit.min=0 limit.max=90
   export function z_ude_more(limit: number): boolean {
         if ((input.acceleration(Dimension.Z)/1100*90) > limit ){
@@ -81,7 +81,7 @@ namespace matubara_blocks {
         }
     }    
 
- //% weight=14 block="ｚ軸＿腕をふる角度が |%limit| 度より小きく" group="体育"
+ //% weight=14 block="ｚ軸＿腕をふる角度が |%limit| 度より小きく" group="センサー"
  //% limit.min=0 limit.max=90
   export function z_ude_small(limit: number): boolean {
         if ((input.acceleration(Dimension.Z)/1100*90) < limit ){
@@ -91,7 +91,7 @@ namespace matubara_blocks {
         }
     }   
 
- //% color="#ffa800" weight=13 blockId=vib_kanketu block="間欠振動" group="体育"
+ //% color="#ffa800" weight=13 blockId=vib_kanketu block="間欠しん動" group="しん動"
   export function vib_kanketu() {
     let i=0;
     for (let i=1 ; i<3 ;i++){
@@ -101,7 +101,7 @@ namespace matubara_blocks {
             basic.pause(400); 
         }
     }
- //% color="#ffa800" weight=12 blockId=vib block="しん動センサー |%mode|" group="体育"
+ //% color="#ffa800" weight=12 blockId=vib block="しん動 |%mode|" group="しん動"
   export function vib(mode: vibrater_onoff) {
             if (mode == vibrater_onoff.ON ) {
             return pins.digitalWritePin(DigitalPin.P1, 1);
@@ -109,4 +109,8 @@ namespace matubara_blocks {
             return pins.digitalWritePin(DigitalPin.P1, 0);
         }
     }   
+
+
+
+
 }

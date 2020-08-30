@@ -2,6 +2,13 @@ enum vibrater_onoff {
     ON,
     OFF,
 }
+enum vibrater_kanketu {
+    間欠,
+    連続,
+}
+
+
+
 
 //% color="#3943c6" block="体育Ver0.91"
 namespace matubara_blocks {
@@ -84,9 +91,19 @@ namespace matubara_blocks {
         }
     }   
 
- //% color="#ffa800" weight=13 blockId=vib block="しん動センサー |%mode| " group="体育"
+ //% color="#ffa800" weight=13 blockId=vib_kanketu block="間欠振動" group="体育"
+  export function vib_kanketu() {
+    let i=0;
+    for (let i=1 ; i<3 ;i++){
+            pins.digitalWritePin(DigitalPin.P1, 1); 
+            basic.pause(300);  
+            pins.digitalWritePin(DigitalPin.P1, 0);
+            basic.pause(300); 
+        }
+    }
+ //% color="#ffa800" weight=12 blockId=vib block="しん動センサー |%mode|" group="体育"
   export function vib(mode: vibrater_onoff) {
-        if (mode == vibrater_onoff.ON ) {
+            if (mode == vibrater_onoff.ON ) {
             return pins.digitalWritePin(DigitalPin.P1, 1);
             } else {
             return pins.digitalWritePin(DigitalPin.P1, 0);

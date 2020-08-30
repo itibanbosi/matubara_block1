@@ -91,7 +91,7 @@ namespace matubara_blocks {
         }
     }   
 
- //% color="#ffa800" weight=13 blockId=vib_kanketu block="間欠しん動" group="しん動"
+ //% color="#ffa800" weight=13 blockId=vib_kanketu block="間欠しん動" group="機能"
   export function vib_kanketu() {
     let i=0;
     for (let i=1 ; i<3 ;i++){
@@ -101,7 +101,7 @@ namespace matubara_blocks {
             basic.pause(400); 
         }
     }
- //% color="#ffa800" weight=12 blockId=vib block="しん動 |%mode|" group="しん動"
+ //% color="#ffa800" weight=12 blockId=vib block="しん動 |%mode|" group="機能"
   export function vib(mode: vibrater_onoff) {
             if (mode == vibrater_onoff.ON ) {
             return pins.digitalWritePin(DigitalPin.P1, 1);
@@ -110,6 +110,16 @@ namespace matubara_blocks {
         }
     }   
 
+ //% color="#ff3d03" weight=11 blockId=oto block="音を鳴らす" group="機能"
+  export function oto() {
+    music.playTone(262, music.beat(BeatFraction.Whole))
+  }
+
+  //% color="#1E90FF" weight=51 block="待ち時間（秒）|%second|" group="機能"
+  //% second.min=0 second.max=10
+  export function driveForwards(second: number): void {
+    basic.pause(second * 1000);
+  }
 
 
 

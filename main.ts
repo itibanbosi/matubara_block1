@@ -96,9 +96,9 @@ namespace matubara_blocks {
     let i=0;
     for (let i=1 ; i<3 ;i++){
             pins.digitalWritePin(DigitalPin.P1, 1); 
-            basic.pause(200);  
+            basic.pause(300);  
             pins.digitalWritePin(DigitalPin.P1, 0);
-            basic.pause(200); 
+            basic.pause(300); 
         }
     }
  //% color="#ffa800" weight=12 blockId=vib block="しん動センサー |%mode|" group="体育"

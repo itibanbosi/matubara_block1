@@ -102,6 +102,23 @@ namespace matubara_blocks {
             basic.pause(400); 
         }
     }
+
+ //% color="#ffa800" weight=13 blockId=vib_kanketu_oto block="間欠しん動（音付き）" group="機能"
+  export function vib_kanketu_oto() {
+    let i=0;
+    for (let i=1 ; i<3 ;i++)　{
+            basic.pause(100); 
+            pins.digitalWritePin(DigitalPin.P1, 1); 
+            music.ringTone(698)
+            basic.pause(400);  
+            pins.digitalWritePin(DigitalPin.P1, 0);
+            music.stopMelody(MelodyStopOptions.All)            
+            basic.pause(400); 
+        }
+    }
+
+
+
  //% color="#ffa800" weight=12 blockId=vib block="しん動 |%mode|" group="機能"
   export function vib(mode: vibrater_onoff) {
             if (mode == vibrater_onoff.ON ) {
@@ -111,9 +128,11 @@ namespace matubara_blocks {
         }
     }   
 
+  
+    
  //% color="#ff3d03" weight=11 blockId=oto block="音を鳴らす" group="機能"
   export function oto() {
-    music.playTone(262, music.beat(BeatFraction.Whole))
+        music.playTone(659, music.beat(BeatFraction.Eighth))
   }
 
   //% color="#1E90FF" weight=51 block="待ち時間（秒）|%second|" group="機能"

@@ -6,29 +6,28 @@ enum daisyou {
     大きい,
     小さい,
 }
-
+enum select_xyz {
+    X,
+    Y,
+    Z,
+    }
 
 
 //% color="#3943c2" block="上教大_体育_0.92"
 namespace matubara_blocks {
 
 
-  //% color="#3943ff" weight=50 blockId=sport_habatobi_x
-  //% block="X角度" group="センサー"
-  export function axis_x():number{
-    return input.acceleration(Dimension.X)/1100*90;
-  }
-
- //% color="#3943ff" weight=49 blockId=sport_habatobi_y
-  //% block="Y角度" group="センサー"
-  export function axis_y():number{
-    return input.acceleration(Dimension.Y)/1100*90;
-  }
-
- //% color="#3943ff" weight=48 blockId=sport_habatobi_z
-  //% block="Z角度" group="センサー"
-  export function axis_z():number{
-    return input.acceleration(Dimension.Z)/1100*90;
+  //% color="#3943ff" weight=50 blockId=axis
+  //% block="|%xyz| 角度の値" group="センサー"
+  export function axis( xyz:select_xyz){
+    switch(xyz){
+        case select_xyz.X:
+        return input.acceleration(Dimension.X)/1100*90;
+        case select_xyz.Y:
+        return input.acceleration(Dimension.Y)/1100*90;
+        case select_xyz.Z:
+        return input.acceleration(Dimension.Z)/1100*90;
+    }
   }
 
 

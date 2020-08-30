@@ -90,7 +90,7 @@ namespace matubara_blocks {
             pins.digitalWritePin(DigitalPin.P1, 1);
             }
         if (mode = vibrater_onoff.OFF){
-            pins.digitalWritePin(DigitalPin.P0, 0)
+            pins.digitalWritePin(DigitalPin.P1, 0)
         }
     }   
 }

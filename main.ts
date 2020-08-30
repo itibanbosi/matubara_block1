@@ -2,11 +2,10 @@ enum vibrater_onoff {
     ON,
     OFF,
 }
-enum vibrater_kanketu {
-    間欠,
-    連続,
+enum daisyou {
+    大きい,
+    小さい,
 }
-
 
 
 
@@ -33,26 +32,32 @@ namespace matubara_blocks {
   }
 
 
- //% weight=39 block="X軸＿腕をふる角度が |%limit| 度より大きい" group="センサー"
+ //% weight=39 blockId=x_ude_more block="X軸＿腕をふる角度が |%limit| 度より |%kakudo|" group="センサー"
  //% limit.min=0 limit.max=90
-  export function x_ude_more(limit: number): boolean {
-        if ((input.acceleration(Dimension.X)/1100*90) > limit ){
+    export function x_ude_more (limit:number,kakudo:daisyou): boolean {
+    switch(kakudo){
+        case daisyou.大きい:
+        if ((input.acceleration(Dimension.X)/1100*90) > limit )
+            {
             return true;
-            }else{
+            }
+            else
+            {
             return false;
+            }
+        case daisyou.小さい :
+            if ((input.acceleration(Dimension.X)/1100*90) < limit ){
+            return true;
+            }
+            else
+            {
+            return false;
+            }
         }
-    }    
+    }
 
- //% weight=38 block="X軸＿腕をふる角度が |%limit| 度より小さい" group="センサー"
- //% limit.min=0 limit.max=90
-  export function x_ude_small(limit: number): boolean {
-        if ((input.acceleration(Dimension.X)/1100*90) < limit ){
-            return true;
-            }else{
-            return false;
-        }
-    }   
- //% weight=37 block="ｙ軸＿腕をふる角度が |%limit| 度より大きい" group="センサー"
+ 
+ //% weight=37 blockId=y_ude_more block="ｙ軸＿腕をふる角度が |%limit| 度より大きい" group="センサー"
  //% limit.min=0 limit.max=90
   export function y_ude_more(limit: number): boolean {
         if ((input.acceleration(Dimension.Y)/1100*90) > limit ){
@@ -62,7 +67,7 @@ namespace matubara_blocks {
         }
     }    
 
- //% weight=36 block="ｙ軸＿腕をふる角度が |%limit| 度より小さい" group="センサー"
+ //% weight=36 blockId=y_ude_small block="ｙ軸＿腕をふる角度が |%limit| 度より小さい" group="センサー"
  //% limit.min=0 limit.max=90
   export function y_ude_small(limit: number): boolean {
         if ((input.acceleration(Dimension.Y)/1100*90) < limit ){
@@ -71,7 +76,7 @@ namespace matubara_blocks {
             return false;
         }
     }   
- //% weight=35 block="ｚ軸＿腕をふる角度が |%limit| 度より大きい" group="センサー"
+ //% weight=35 blockId=z_ude_more block="ｚ軸＿腕をふる角度が |%limit| 度より大きい" group="センサー"
  //% limit.min=0 limit.max=90
   export function z_ude_more(limit: number): boolean {
         if ((input.acceleration(Dimension.Z)/1100*90) > limit ){
@@ -81,7 +86,7 @@ namespace matubara_blocks {
         }
     }    
 
- //% weight=34 block="ｚ軸＿腕をふる角度が |%limit| 度より小さい" group="センサー"
+ //% weight=34 blockId=z_ude_small block="ｚ軸＿腕をふる角度が |%limit| 度より小さい" group="センサー"
  //% limit.min=0 limit.max=90
   export function z_ude_small(limit: number): boolean {
         if ((input.acceleration(Dimension.Z)/1100*90) < limit ){

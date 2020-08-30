@@ -88,8 +88,7 @@ namespace matubara_blocks {
   export function vib(mode: vibrater_onoff) {
         if (mode = vibrater_onoff.ON ) {
             return pins.digitalWritePin(DigitalPin.P1, 1);
-            }
-        if (mode = vibrater_onoff.OFF){
+            }else {
             return pins.digitalWritePin(DigitalPin.P1, 0);
         }
     }   

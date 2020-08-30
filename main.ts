@@ -84,8 +84,8 @@ namespace matubara_blocks {
         }
     }   
 
- //% weight=13 block="しん動センサー |mode| " group="体育"
-  export function vibrater(mode: vibrater_onoff) {
+ //% weight=13 blockId=vib block="しん動センサー |mode| " group="体育"
+  export function vib(mode: vibrater_onoff) {
         if (mode = vibrater_onoff.ON ){
             pins.digitalWritePin(DigitalPin.P1, 1);
             }

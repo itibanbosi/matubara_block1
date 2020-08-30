@@ -14,19 +14,19 @@ enum vibrater_kanketu {
 namespace matubara_blocks {
 
 
-  //% color="#394300" weight=50 blockId=sport_habatobi_x
+  //% color="#3943ff" weight=50 blockId=sport_habatobi_x
   //% block="X角度" group="センサー"
   export function axis_x():number{
     return input.acceleration(Dimension.X)/1100*90;
   }
 
- //% color="#394300" weight=49 blockId=sport_habatobi_y
+ //% color="#3943ff" weight=49 blockId=sport_habatobi_y
   //% block="Y角度" group="センサー"
   export function axis_y():number{
     return input.acceleration(Dimension.Y)/1100*90;
   }
 
- //% color="#394300" weight=48 blockId=sport_habatobi_z
+ //% color="#3943ff" weight=48 blockId=sport_habatobi_z
   //% block="Z角度" group="センサー"
   export function axis_z():number{
     return input.acceleration(Dimension.Z)/1100*90;

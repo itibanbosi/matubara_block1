@@ -86,7 +86,7 @@ namespace matubara_blocks {
 
  //% color="#ffa800" weight=13 blockId=vib block="しん動センサー |%mode| " group="体育"
   export function vib(mode: vibrater_onoff) {
-        if (mode = vibrater_onoff.ON ) {
+        if (mode == vibrater_onoff.ON ) {
             return pins.digitalWritePin(DigitalPin.P1, 1);
             } else {
             return pins.digitalWritePin(DigitalPin.P1, 0);

@@ -13,7 +13,7 @@ enum select_xyz {
     }
 
 
-//% color="#3943c2" block="上教大_体育_0.92"
+//% color="#3943c2" block="上教大_体育_0.94"
 namespace matubara_blocks {
 
 
